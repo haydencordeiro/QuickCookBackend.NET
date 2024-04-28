@@ -12,11 +12,7 @@ namespace Recipe_API.Controllers
         public RecipeController(RecipeContext db) {
             _db = db;
         }
-        [HttpGet("test")]
-        public ActionResult<String> test()
-        {
-            return Ok("hello");
-        }
+
         [HttpGet]
         public ActionResult<IEnumerable<Recipe>> getRecipes()
         {
