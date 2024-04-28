@@ -1,6 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Recipe_API.Model;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<RecipeContext>(options =>
+     options.UseSqlServer("Server=HAYDEN\\SQLEXPRESS;Database=RecipesDB;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true;"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
