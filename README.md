@@ -3,6 +3,7 @@
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
 QuickCook is a dynamic online platform designed to revolutionize the way busy students approach cooking. Aimed at addressing the time constraints and budget limitations faced by grad students, QuickCook provides a curated collection of quick, easy, and affordable recipes.
 
