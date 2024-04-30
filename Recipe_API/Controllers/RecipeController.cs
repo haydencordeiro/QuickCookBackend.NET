@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PexelsDotNetSDK.Api;
 using Recipe_API.Model;
 
 namespace Recipe_API.Controllers
@@ -20,14 +21,17 @@ namespace Recipe_API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Recipe> addRecipes([FromBody]Recipe recipe)
+        public async Task<IActionResult> AddRecipes([FromBody] Recipe recipe)
         {
-            //Recipe tempRecipe = new Recipe();
-            //tempRecipe.Title = "test Title";
-            //tempRecipe.RecipeURL = "https://www.youtube.com/watch?v=suXQ2mPfhSg"; 
-            
+
+            // Update the picture URL
+            // This key is no longer valid
+            var pexelsClient = new PexelsClient("EIDVYfVDpZYe1ueHK35rSOhxC75WjFhqqapoiwRXcj6pw8NOcqNnjeZS");
+            var result = await pexelsClient.SearchPhotosAsync(recipe.Title);
+            recipe.Picture = result.photos[0].url;
+
             _db.Recipes.Add(recipe);
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
 
             return Ok(recipe);
         }
