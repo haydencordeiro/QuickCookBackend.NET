@@ -1,7 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Recipe_API.Model;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("myAppCors", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+    });
+});
 
 // Add services to the container.
 builder.Services.AddDbContext<RecipeContext>(options =>
@@ -21,7 +32,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+app.UseCors("myAppCors");
 
 app.UseAuthorization();
 
