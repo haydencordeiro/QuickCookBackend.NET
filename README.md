@@ -1,5 +1,7 @@
 
 # QuickCook
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
@@ -33,7 +35,7 @@ QuickCook is built using Angular and .NET technologies, ensuring a seamless and 
 ---
 
 ## Demo
-[![DEMO](https://img.youtube.com/vi/fkRCeE9O6SU/0.jpg)](https://www.youtube.com/watch?v=fkRCeE9O6SU)
+[![DEMO](https://img.youtube.com/vi/r_R-d4lYf-A/0.jpg)](https://www.youtube.com/watch?v=r_R-d4lYf-A)
 
 ## Frontend
 [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/haydencordeiro/QuickCookAngularFrontend/)  
