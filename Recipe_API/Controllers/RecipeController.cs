@@ -22,10 +22,11 @@ namespace Recipe_API.Controllers
         [HttpPost]
         public ActionResult<Recipe> addRecipes([FromBody]Recipe recipe)
         {
-            Recipe tempRecipe = new Recipe();
-            tempRecipe.Title = "test Title";
-            tempRecipe.RecipeURL = "https://www.youtube.com/watch?v=suXQ2mPfhSg"; 
-            _db.Recipes.Add(tempRecipe);
+            //Recipe tempRecipe = new Recipe();
+            //tempRecipe.Title = "test Title";
+            //tempRecipe.RecipeURL = "https://www.youtube.com/watch?v=suXQ2mPfhSg"; 
+            
+            _db.Recipes.Add(recipe);
             _db.SaveChanges();
 
             return Ok(recipe);
@@ -55,10 +56,9 @@ namespace Recipe_API.Controllers
             {
                 return NotFound();
             }
-            recipe.Title = updatedRecipe.Title;
-            recipe.RecipeURL = updatedRecipe.RecipeURL;
-            recipe.UpdatedDate = updatedRecipe.UpdatedDate;
-            //_db.Recipes.Remove(recipe);
+            //recipe.Title = updatedRecipe.Title;
+            //recipe.RecipeURL = updatedRecipe.RecipeURL;
+            //recipe.UpdatedDate = updatedRecipe.UpdatedDate;
             _db.SaveChanges();
 
             return Ok(recipe);
