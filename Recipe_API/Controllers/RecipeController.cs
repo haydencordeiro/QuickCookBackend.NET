@@ -28,7 +28,7 @@ namespace Recipe_API.Controllers
             // This key is no longer valid
             var pexelsClient = new PexelsClient("EIDVYfVDpZYe1ueHK35rSOhxC75WjFhqqapoiwRXcj6pw8NOcqNnjeZS");
             var result = await pexelsClient.SearchPhotosAsync(recipe.Title);
-            recipe.Picture = result.photos[0].url;
+            recipe.Picture = result.photos[0].id.ToString();
 
             _db.Recipes.Add(recipe);
             await _db.SaveChangesAsync();
