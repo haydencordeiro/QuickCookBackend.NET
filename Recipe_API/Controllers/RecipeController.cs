@@ -60,9 +60,9 @@ namespace Recipe_API.Controllers
             {
                 return NotFound();
             }
-            //recipe.Title = updatedRecipe.Title;
-            //recipe.RecipeURL = updatedRecipe.RecipeURL;
-            //recipe.UpdatedDate = updatedRecipe.UpdatedDate;
+            recipe.Title = updatedRecipe.Title;
+            recipe.RecipeURL = updatedRecipe.RecipeURL;
+            recipe.Cuisine = updatedRecipe.Cuisine;
             _db.SaveChanges();
 
             return Ok(recipe);
